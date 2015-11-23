@@ -22,7 +22,7 @@ public class rsintcompareactivity extends Activity
         Allocation alloc_b = Allocation.createSized(rs, Element.I32(rs), 1000);
         Allocation alloc_diffs = Allocation.createSized(rs, Element.I32(rs), 1);
         alloc_a.copyFrom(a);
-        alloc_b.copyFrom(a);
+        alloc_b.copyFrom(b);
         ScriptC_compare script = new ScriptC_compare(rs);
         script.set_num_diffs(0);
         script.set_alloc_b(alloc_b);
